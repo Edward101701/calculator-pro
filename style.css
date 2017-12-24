@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Digital7Italic';
+    src: url('font/digital-7.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+}
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url('img/calculator-bg.jpg') #d8d9dd no-repeat;
+    width: 354px;
+    height: 600px;
+    padding: 15px;
+}
+
+.display {
+    font-family: 'Digital7Italic', sans-serif;
+    text-align: right;
+    margin-top: 86px;
+    width: 92%;
+    align-self: center;
+    margin-left: 4px;
+    height: 98px;
+    font-size: 104px;
+    line-height: .7;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    user-select: none;
+}
+
+.button {
+    background: url('img/button-bg.png') no-repeat;
+    width: 60px;
+    height: 51px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: auto;
+}
+.button:focus {
+    outline-width: 10px;
+}
+.button_radic,
+.button_off {
+    grid-row-start: 1;
+}
+.button_radic {
+    grid-column-start: 4;
+}
+.button_off {
+    grid-column-start: 5;
+}
+.button_mc,
+.button_mr,
+.button_m-,
+.button_mplus,
+.button_divide {
+    grid-row-start: 2;
+}
+.button_mc,
+.button_percent,
+.button_plusminus,
+.button_cancel,
+.button_ac {
+    grid-column-start: 1;
+}
+.button_mr,
+.button_7,
+.button_4,
+.button_1,
+.button_0 {
+    grid-column-start: 2;
+}
+.button_m-,
+.button_8,
+.button_5,
+.button_2,
+.button_decimal-point {
+    grid-column-start: 3;
+}
+
+.button_mplus,
+.button_9,
+.button_6,
+.button_3,
+.button_equal {
+    grid-column-start: 4;
+}
+
+.button_divide,
+.button_multiply,
+.button_minus,
+.button_plus {
+    grid-column-start: 5;
+}
+.button_percent,
+.button_7,
+.button_8,
+.button_9,
+.button_multiply {
+    grid-row-start: 3;
+}
+.button_plusminus,
+.button_4,
+.button_5,
+.button_6,
+.button_minus {
+    grid-row-start: 4;
+}
+.button_cancel,
+.button_1,
+.button_2,
+.button_3,
+.button_plus {
+    grid-row-start: 5;
+}
+.button_plus {
+    background: url('img/button-plus-bg.png') no-repeat;
+    height: 109px;
+    grid-row-end: 7;
+}
+.button_ac,
+.button_0,
+.button_decimal-point,
+.button_equal {
+    grid-row-start: 6;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-rows: repeat(6, 56px);
+    grid-template-columns: repeat(5, 20%);
+    margin-bottom: 10px;
+}
